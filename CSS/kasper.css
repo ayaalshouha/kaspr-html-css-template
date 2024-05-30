@@ -19,7 +19,7 @@ ul{
 .container{
     margin: 0 auto;
     padding: 0 15px;
-    background-color: #d2e6eb;
+    /* background-color: #d2e6eb; */
 }
 @media (min-width: 768px) {
     .container {
@@ -40,6 +40,12 @@ ul{
     }
   }
 
+  header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+  }
   header .container{
     display: flex;
     justify-content: space-between;
@@ -54,10 +60,13 @@ ul{
     height: 1px;
     background-color: #a2a2a2;
     bottom: 0;
-    width: calc(100% - 30px);
-    left: 15px;
+    width: calc(100% - 30px); /* remove padding px */
+    left: 15px; 
   }
 
+  header .logo{
+    height: 40px;
+  }
   header nav{
     display: flex;
     justify-content: flex-end;
@@ -97,14 +106,15 @@ ul{
   }
 
   header nav ul li a {
-    padding: 40px!important;
+    padding: 15px !important;
   }
 }
 
 nav ul li a{
+    display: block;
     text-decoration: none;
     color: white;
-    padding: 40px 10px;
+    padding: 41px 10px;
     font-size: 14px;
     transition: 0.3s;
 }
@@ -113,18 +123,30 @@ nav ul  li:first-child a{
   color: var(--main-color);
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
 }
 
 nav .form{
-    width: 40px;
-    height: 30px;
-    text-align: center;
-    border-left: 1px solid white;
-    margin-left: 15px;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
 }
 nav .form i{
     color: white;
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
+
