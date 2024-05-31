@@ -344,7 +344,7 @@ nav .form i{
 
 @media(max-width:767px){
   .services-content .serv-box i{
-    margin-bottom: 0 0 30px;
+    margin: 0 0 30px;
   }
 }
 .serv-box .serv-text h3{
