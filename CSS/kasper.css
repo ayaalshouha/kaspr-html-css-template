@@ -651,9 +651,9 @@ nav .form i{
   justify-content: space-between;
 }
 
-@media(min-width: 992){
-  .skills-section .container div{
-    flex-basis: 45%;
+@media (min-width: 992px) {
+  .skills-section .container > div {
+      flex-basis: 45%; /* direct child */
   }
 }
 
@@ -673,13 +673,12 @@ nav .form i{
 
 .skills-section .testimonials .content{
     display: flex;
-    align-items: center;
     margin-bottom: 30px
 }
 
 .testimonials .content img{
-  width: 100px;
-    height: 100px;
+   width: 100px;
+   height: 100px;
     border-radius: 50%;
     margin-right: 50px;
 }
@@ -695,13 +694,12 @@ nav .form i{
   margin-bottom: 10px;
 } 
 
-.testimonials .bullets{
-  margin: 0 auto;
-}
 .testimonials ul{
   display: flex;
-  
+  justify-content: center;
+  margin: 50px 0;
 }
+
 .testimonials ul li{
   width: 15px;
   height: 15px;
@@ -717,3 +715,102 @@ nav .form i{
 .testimonials ul li.active{
   background-color: var(--main-color);
 }
+
+.skills-section .prog-holder{
+  margin-bottom: 40px;
+}
+.prog-holder h4{
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.prog-holder .prog{
+  background-color: #dedadc;
+  height: 30px;
+}
+.prog-holder .prog span{
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
+  position: relative;
+}
+.prog-holder .prog span::before{
+  position: absolute;
+  content: attr(data-progress);
+  background-color: black;
+  color: white;
+  padding: 4px 0;
+  width: 40px;
+  text-align: center;
+  top: -35px;
+  right: -18px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.prog-holder .prog span::after{
+  position: absolute;
+  content: "";
+  border-width: 8px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  top: -9px;
+  right: -7px;
+}
+
+.qoute{
+  padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.qoute .container{
+  position: relative;
+}
+
+.qoute::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top :0; 
+  left: 0;
+  background-color: rgb(0 0 0 / 75%);
+}
+
+.qoute q{
+  display: block;
+  font-size: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  quotes: "" "";
+}
+
+q::before {
+  position: absolute;
+  content: '\f10d'; 
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 800; 
+  left: 0; 
+  top: 0;
+  font-size: 18px; 
+  color: white; 
+}
+
+q::after {
+  position: absolute;
+  content: '\f10e';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 800;
+  right: 42px;
+  bottom: 5px;
+  font-size: 18px;
+  color: white;
+}
+
