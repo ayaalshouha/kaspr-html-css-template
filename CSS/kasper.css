@@ -3,11 +3,13 @@
     margin: 0;
     padding: 0; 
 }
+
 :root{
     --main-color: #19c8fa; 
     --section-padding: 100px; 
     --transparent-color: rgb(15 116 143 / 70%);
     --section-padding: 100px;
+    --paragraph-color: #777;
   }
 html{
     scroll-behavior: smooth;
@@ -76,7 +78,7 @@ ul{
 }
 
 .main-heading p{
-  color: #777;
+  color:var(--paragraph-color);
   width: 550px;
   line-height: 2;
   margin: 0 auto 100px;
@@ -337,7 +339,7 @@ nav .form i{
 }
 
 .serv-box .serv-text {
-  color: #777;
+  color: var(--paragraph-color);
   line-height: 2;
 }
 
@@ -665,7 +667,7 @@ nav .form i{
 }
 
 .skills-section .container p{
-  color: #777;
+  color: var(--paragraph-color);
     text-align: center;
     line-height: 2;
     margin: 0 0 60px;
@@ -673,12 +675,24 @@ nav .form i{
 
 .skills-section .testimonials .content{
     display: flex;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    align-items: center;
+}
+@media(max-width: 767px){
+  .skills-section .testimonials .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+  .testimonials .content img{
+    margin: 0 auto;
+  }
 }
 
 .testimonials .content img{
    width: 100px;
-   height: 100px;
     border-radius: 50%;
     margin-right: 50px;
 }
@@ -688,7 +702,7 @@ nav .form i{
 }
 
 .testimonials .text p {
-  color: #777;
+  color: var(--paragraph-color);
   text-align: right;
   font-size: 14px;
   margin-bottom: 10px;
@@ -789,28 +803,4 @@ nav .form i{
   font-size: 30px;
   margin-bottom: 20px;
   position: relative;
-  quotes: "" "";
 }
-
-q::before {
-  position: absolute;
-  content: '\f10d'; 
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 800; 
-  left: 0; 
-  top: 0;
-  font-size: 18px; 
-  color: white; 
-}
-
-q::after {
-  position: absolute;
-  content: '\f10e';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 800;
-  right: 42px;
-  bottom: 5px;
-  font-size: 18px;
-  color: white;
-}
-
