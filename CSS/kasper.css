@@ -943,3 +943,8 @@ form input[type="submit"]{
   line-height: 2;
   margin-left: 50px;
 }
+
+form input[type="email"]:focus,
+form input[type="submit"]:focus{
+  outline: none;
+}
