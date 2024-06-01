@@ -899,16 +899,20 @@ nav .form i{
   align-items: center;
 }
 
-@media(max-width: 767px){
+@media(max-width: 992px){
   .subscribe-section .container{
     flex-direction: column;
   }
+  .subscribe-section .container p {
+    margin: 30px 0 0 ;
+}
 }
 
 .subscribe-section form{
     display: flex;
     position: relative;
     width: 500px;
+    max-width: 100%;
 }
 
 .subscribe-section form i{
@@ -919,10 +923,11 @@ nav .form i{
 }
 
 form input[type="email"]{
-  padding: 20px 20px 20px 60px;
+     padding: 20px 20px 20px 60px;
     background-color: transparent;
     border: 1px solid white;
     border-right: none;
+    width: calc(100% - 130px);
 }
 
 form input[type="submit"]{
@@ -937,9 +942,4 @@ form input[type="submit"]{
 .subscribe-section .container p {
   line-height: 2;
   margin-left: 50px;
-}
-@media (max-width: 991px) {
-  ..subscribe-section .container p {
-      margin: 30px 0 0;
-  }
 }
