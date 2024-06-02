@@ -514,8 +514,11 @@ nav .form i{
 
 .video-section{
   position: relative;
+  width: 100%;
 }
+
 .video-section video{
+  display: block;
   width: 100%;
 }
 .video-section::before {
@@ -528,8 +531,21 @@ nav .form i{
   background-color: rgb(0 0 0 / 40%);
 }
 
+@media (max-width: 480px) {
+  .video-section .text-content {
+     max-height: 100%;
+  }
+  .video-section .text-content h2{
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+  .video-section .text-content p{
+    margin-bottom: 10px;
+  }
+}
+
 .video-section .text-content{
-  width: 100%;
+    width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -540,7 +556,7 @@ nav .form i{
 }
 
 .video-section .text-content h2{
-  margin: 0 0 30px;
+    margin: 0 0 30px;
     text-transform: uppercase;
     font-weight: normal;
 }
@@ -693,6 +709,13 @@ nav .form i{
     border-radius: 50%;
     margin-right: 50px;
 }
+
+@media(max-width:417px){
+  .testimonials .content img{
+    margin: 0;
+  }
+}
+
 .testimonials .content .text{
   line-height: 1.8;
   border-bottom: 1px solid #ccc
